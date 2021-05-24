@@ -31,7 +31,7 @@ header, main, footer, menu , .location , .acceuilmsg{
     width: 100%;
     height: 100%;
     background-color: rgba(92, 92, 92, 0.2);
-    opacity: 1;
+    opacity: 0;
     animation: loadingpage 3s ease-in-out;
     &buttons{
         position: relative;
