@@ -6,6 +6,52 @@
 }
 
 /*Quelques variables*/
+/*Animations utilisees*/
+@-webkit-keyframes loadingpage {
+  0%, 50% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes loadingpage {
+  0%, 50% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spin-left {
+  to {
+    -webkit-transform: rotateZ(-380deg);
+            transform: rotateZ(-380deg);
+  }
+}
+
+@keyframes spin-left {
+  to {
+    -webkit-transform: rotateZ(-380deg);
+            transform: rotateZ(-380deg);
+  }
+}
+
+@-webkit-keyframes spin-right {
+  to {
+    -webkit-transform: rotateZ(380deg);
+            transform: rotateZ(380deg);
+  }
+}
+
+@keyframes spin-right {
+  to {
+    -webkit-transform: rotateZ(380deg);
+            transform: rotateZ(380deg);
+  }
+}
+
 body {
   position: relative;
 }
@@ -75,49 +121,17 @@ header, main, footer, menu, .location, .acceuilmsg {
   animation: spin-left 1s linear infinite alternate-reverse;
 }
 
-@-webkit-keyframes loadingpage {
-  0%, 50% {
-    opacity: 1;
-  }
-  50%, 100% {
-    opacity: 1;
+@-webkit-keyframes imageblur {
+  to, from {
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
   }
 }
 
-@keyframes loadingpage {
-  0%, 50% {
-    opacity: 1;
-  }
-  50%, 100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes spin-left {
-  to {
-    -webkit-transform: rotateZ(-380deg);
-            transform: rotateZ(-380deg);
-  }
-}
-
-@keyframes spin-left {
-  to {
-    -webkit-transform: rotateZ(-380deg);
-            transform: rotateZ(-380deg);
-  }
-}
-
-@-webkit-keyframes spin-right {
-  to {
-    -webkit-transform: rotateZ(380deg);
-            transform: rotateZ(380deg);
-  }
-}
-
-@keyframes spin-right {
-  to {
-    -webkit-transform: rotateZ(380deg);
-            transform: rotateZ(380deg);
+@keyframes imageblur {
+  to, from {
+    -webkit-filter: blur(6px);
+            filter: blur(6px);
   }
 }
 
@@ -337,20 +351,6 @@ header img {
   position: absolute;
   right: 30px;
   bottom: 25px;
-}
-
-@-webkit-keyframes imageblur {
-  to, from {
-    -webkit-filter: blur(6px);
-            filter: blur(6px);
-  }
-}
-
-@keyframes imageblur {
-  to, from {
-    -webkit-filter: blur(6px);
-            filter: blur(6px);
-  }
 }
 
 footer {

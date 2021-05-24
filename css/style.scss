@@ -10,6 +10,29 @@ $clr-violetfonce: #9356DC ;
 $clr-violetclaire: #FF79DA ;
 $clr-vertclaire: #99E2D0;
 
+/*Animations utilisees*/
+@keyframes loadingpage {
+    0%,50%{
+        opacity: 1;
+    }
+    
+    50%,100%{
+        opacity: 1;
+    }
+}
+
+@keyframes spin-left{
+    to{
+        transform: rotateZ(-380deg);
+    }
+}
+
+@keyframes spin-right{
+    to{
+        transform: rotateZ(380deg);
+    }
+}
+
 
 
 body{
@@ -68,29 +91,12 @@ header, main, footer, menu , .location , .acceuilmsg{
             opacity: 1;
             animation: spin-left 1s linear infinite alternate-reverse;
         }
-       
     }
 }
 
-@keyframes loadingpage {
-    0%,50%{
-        opacity: 1;
-    }
-    
-    50%,100%{
-        opacity: 1;
-    }
-}
-
-@keyframes spin-left{
-    to{
-        transform: rotateZ(-380deg);
-    }
-}
-
-@keyframes spin-right{
-    to{
-        transform: rotateZ(380deg);
+@keyframes imageblur {
+    to,from{
+        filter: blur(6px);
     }
 }
 
@@ -273,11 +279,6 @@ header{
     }
 }
 
-@keyframes imageblur {
-    to,from{
-        filter: blur(6px);
-    }
-}
 
 footer{
     background-color: rgb(48, 48, 48);
