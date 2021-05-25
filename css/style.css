@@ -351,8 +351,8 @@ header img {
 
 .main .restaurants .heart i {
   position: absolute;
-  right: 15px;
-  bottom: 2px;
+  right: .2em;
+  bottom: 0;
 }
 
 .main .restaurants .heart .fas {

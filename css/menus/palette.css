@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*Le code commence ici*/
+header {
+  width: calc(100% - 4em);
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+
+header img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=palette.css.map */
