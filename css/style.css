@@ -5,6 +5,11 @@
           box-sizing: border-box;
 }
 
+a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
 /*Quelques variables*/
 /*Animations utilisees*/
 @-webkit-keyframes loadingpage {
@@ -74,63 +79,42 @@ body {
     animation: imageblur 3s ease-in-out;
 }*/
 /*Animation au chargement de la page*/
-.loading {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(92, 92, 92, 0.2);
-  opacity: 0;
-  -webkit-animation: loadingpage 3s ease-in-out;
-          animation: loadingpage 3s ease-in-out;
-}
-
-.loadingbuttons {
-  position: relative;
-  top: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-.loadingbuttons .btn {
-  position: absolute;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0);
-}
-
-.loadingbuttons .btn1 {
-  border-width: 2em;
-  border-right-color: #9356dc;
-  border-left-color: #9356dc;
-  opacity: 1;
-  animation: spin-left 1.1s linear infinite alternate-reverse;
-}
-
-.loadingbuttons .btn2 {
-  border-width: 2rem;
-  border-right-color: #ff79d4;
-  border-left-color: #ff79d4;
-  opacity: 1;
-  animation: spin-right 1.05s linear infinite alternate-reverse;
-}
-
-.loadingbuttons .btn3 {
-  border-width: 2rem;
-  border-right-color: #99e2d0;
-  border-left-color: #99e2d0;
-  opacity: 1;
-  animation: spin-left 1s linear infinite alternate-reverse;
-}
-
+/*.loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 92, 92, 0.2);
+    opacity: 0;
+    animation: loadingpage 3s ease-in-out;
+    &buttons{
+        position: relative;
+        top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        .btn{
+            position: absolute;
+            border-radius:50%;
+            border-style:solid;
+            border-color:rgba(0,0,0,0);
+        }
+        .btn1{
+            border-width: 2em;
+            border-right-color: rgb(147, 86, 220);
+            border-left-color: rgb(147, 86, 220);
+            opacity: 1;
+            animation: spin-left 1.1s linear infinite alternate-reverse;
+        }
+        .btn3{
+            border-width: 2rem;
+            border-right-color: rgb(153, 226, 208);
+            border-left-color: rgb(153, 226, 208);
+            opacity: 1;
+            animation: spin-left 1s linear infinite alternate-reverse;
+        }
+    }
+}*/
 /*Le css de la page d'acceuil commence ici*/
 header {
   background-color: #f8f8f8;
@@ -313,6 +297,10 @@ header img {
   font-size: 1.5em;
 }
 
+.main a {
+  color: black;
+}
+
 .main .restaurants {
   width: calc(100% - 4em);
   -webkit-box-shadow: 2px 4px 10px #b3b3b3;
@@ -321,6 +309,7 @@ header img {
   position: relative;
   border-radius: 20px;
   padding-bottom: 1em;
+  cursor: pointer;
 }
 
 .main .restaurants img {
@@ -426,10 +415,27 @@ footer .footer {
   gap: .5em;
 }
 
+footer .footer p {
+  cursor: pointer;
+}
+
+footer .footer p:hover {
+  color: #bc95e9;
+}
+
+footer .footer p:hover i {
+  color: #bc95e9;
+}
+
 footer .footer a {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   color: white;
+  cursor: pointer;
+}
+
+footer .footer a:hover {
+  color: #bc95e9;
 }
 
 footer .footer i {
