@@ -8,24 +8,30 @@
 /*Quelques variables*/
 /*Animations*/
 @-webkit-keyframes heartanim {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 0.3;
   }
-  50%, 70% {
+  50%,
+  70% {
     opacity: 0.6;
   }
-  80%, 100% {
+  80%,
+  100% {
     opacity: 1;
   }
 }
 @keyframes heartanim {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 0.3;
   }
-  50%, 70% {
+  50%,
+  70% {
     opacity: 0.6;
   }
-  80%, 100% {
+  80%,
+  100% {
     opacity: 1;
   }
 }
@@ -82,6 +88,40 @@
   }
 }
 
+@-webkit-keyframes checkbtn {
+  from {
+    opacity: 0.8;
+    -webkit-transform: rotate(-360deg) scale(0) translateX(4em);
+            transform: rotate(-360deg) scale(0) translateX(4em);
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(1) translateX(0);
+            transform: rotate(0deg) scale(1) translateX(0);
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+@keyframes checkbtn {
+  from {
+    opacity: 0.8;
+    -webkit-transform: rotate(-360deg) scale(0) translateX(4em);
+            transform: rotate(-360deg) scale(0) translateX(4em);
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(1) translateX(0);
+            transform: rotate(0deg) scale(1) translateX(0);
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
 /*Le code commence ici*/
 header {
   position: relative;
@@ -90,10 +130,18 @@ header {
   width: 100%;
 }
 
+header a {
+  color: black;
+}
+
 header i {
   position: absolute;
   top: 1.4em;
   left: 2em;
+}
+
+header i :hover {
+  color: grey;
 }
 
 header a {
@@ -143,8 +191,8 @@ header a div {
           animation-name: mennu;
   -webkit-animation-duration: 350ms;
           animation-duration: 350ms;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -153,10 +201,10 @@ header a div {
   opacity: 0;
   -webkit-animation-name: mennu;
           animation-name: mennu;
-  -webkit-animation-duration: 700ms;
-          animation-duration: 700ms;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -165,10 +213,10 @@ header a div {
   opacity: 0;
   -webkit-animation-name: mennu;
           animation-name: mennu;
-  -webkit-animation-duration: 1050ms;
-          animation-duration: 1050ms;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -177,10 +225,10 @@ header a div {
   opacity: 0;
   -webkit-animation-name: mennu;
           animation-name: mennu;
-  -webkit-animation-duration: 1400ms;
-          animation-duration: 1400ms;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -189,10 +237,10 @@ header a div {
   opacity: 0;
   -webkit-animation-name: mennu;
           animation-name: mennu;
-  -webkit-animation-duration: 1750ms;
-          animation-duration: 1750ms;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -201,10 +249,10 @@ header a div {
   opacity: 0;
   -webkit-animation-name: mennu;
           animation-name: mennu;
-  -webkit-animation-duration: 2100ms;
-          animation-duration: 2100ms;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -213,10 +261,10 @@ header a div {
   opacity: 0;
   -webkit-animation-name: mennu;
           animation-name: mennu;
-  -webkit-animation-duration: 2450ms;
-          animation-duration: 2450ms;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  -webkit-animation-duration: 350ms;
+          animation-duration: 350ms;
+  -webkit-animation-delay: 1050ms;
+          animation-delay: 1050ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -260,8 +308,8 @@ header a div {
 .main_menu h1 .heart:hover .fas {
   visibility: visible;
   mix-blend-mode: darken;
-  -webkit-animation: heartanim 350ms ease-in both;
-          animation: heartanim 350ms ease-in both;
+  -webkit-animation: heartanim 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in both;
+          animation: heartanim 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in both;
 }
 
 .main_menu h1 .heart i {
@@ -312,8 +360,8 @@ header a div {
           animation-name: menu;
   -webkit-animation-duration: 350ms;
           animation-duration: 350ms;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -324,8 +372,8 @@ header a div {
           animation-name: menu;
   -webkit-animation-duration: 700ms;
           animation-duration: 700ms;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -336,13 +384,20 @@ header a div {
           animation-name: menu;
   -webkit-animation-duration: 1050ms;
           animation-duration: 1050ms;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .main_menu_entrees .entrees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
   background-color: white;
   border-radius: 15px;
   padding: .5em 1em;
@@ -350,14 +405,67 @@ header a div {
           box-shadow: 1px 1px 7px #c7c7c7;
 }
 
-.main_menu_entrees .entrees_nom {
-  font-weight: 700;
-  font-size: 1.1em;
+.main_menu_entrees .entrees:hover .fa-check-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: checkbtn 500ms forwards;
+          animation: checkbtn 500ms forwards;
 }
 
-.main_menu_entrees .entrees .prix {
-  float: right;
+.main_menu_entrees .entrees_nom {
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bolder;
+  font-size: 1.1em;
+  text-overflow: ellipsis;
+}
+
+.main_menu_entrees .entrees .detail_1 {
+  font-weight: lighter;
+  text-overflow: ellipsis;
+}
+
+.main_menu_entrees .entrees .detail_2 {
   font-weight: 700;
+  -webkit-box-flex: 5%;
+      -ms-flex: 5%;
+          flex: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-top: 1.5em;
+}
+
+.main_menu_entrees .entrees .fa-check-circle {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -.5em;
+  margin-bottom: -.5em;
+  margin-right: -.5em;
+  margin-left: .5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  display: none;
+  background-color: #99E2D0;
+  color: white;
 }
 
 .main_menu_plats {
@@ -407,6 +515,13 @@ header a div {
 }
 
 .main_menu_plats .plats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
   background-color: white;
   border-radius: 15px;
   padding: .5em 1em;
@@ -414,14 +529,67 @@ header a div {
           box-shadow: 1px 1px 7px #c7c7c7;
 }
 
-.main_menu_plats .plats_nom {
-  font-weight: 700;
-  font-size: 1.1em;
+.main_menu_plats .plats:hover .fa-check-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: checkbtn 500ms forwards;
+          animation: checkbtn 500ms forwards;
 }
 
-.main_menu_plats .plats .prix {
-  float: right;
+.main_menu_plats .plats_nom {
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bolder;
+  font-size: 1.1em;
+  text-overflow: ellipsis;
+}
+
+.main_menu_plats .plats .detail_1 {
+  font-weight: lighter;
+  text-overflow: ellipsis;
+}
+
+.main_menu_plats .plats .detail_2 {
   font-weight: 700;
+  -webkit-box-flex: 5%;
+      -ms-flex: 5%;
+          flex: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-top: 1.5em;
+}
+
+.main_menu_plats .plats .fa-check-circle {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -.5em;
+  margin-bottom: -.5em;
+  margin-right: -.5em;
+  margin-left: .5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  display: none;
+  background-color: #99E2D0;
+  color: white;
 }
 
 .main_menu_desserts {
@@ -471,6 +639,13 @@ header a div {
 }
 
 .main_menu_desserts .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: hidden;
   background-color: white;
   border-radius: 15px;
   padding: .5em 1em;
@@ -478,14 +653,67 @@ header a div {
           box-shadow: 1px 1px 7px #c7c7c7;
 }
 
-.main_menu_desserts .desserts_nom {
-  font-weight: 700;
-  font-size: 1.1em;
+.main_menu_desserts .desserts:hover .fa-check-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: checkbtn 500ms forwards;
+          animation: checkbtn 500ms forwards;
 }
 
-.main_menu_desserts .desserts .prix {
-  float: right;
+.main_menu_desserts .desserts_nom {
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bolder;
+  font-size: 1.1em;
+  text-overflow: ellipsis;
+}
+
+.main_menu_desserts .desserts .detail_1 {
+  font-weight: lighter;
+  text-overflow: ellipsis;
+}
+
+.main_menu_desserts .desserts .detail_2 {
   font-weight: 700;
+  -webkit-box-flex: 5%;
+      -ms-flex: 5%;
+          flex: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-top: 1.5em;
+}
+
+.main_menu_desserts .desserts .fa-check-circle {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -.5em;
+  margin-bottom: -.5em;
+  margin-right: -.5em;
+  margin-left: .5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  display: none;
+  background-color: #99E2D0;
+  color: white;
 }
 
 .main .btn_commander {
