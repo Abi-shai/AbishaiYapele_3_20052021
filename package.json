@@ -1,0 +1,22 @@
+{
+  "name": "abishaiyapele_3_20052021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass --watch ./scss/ -o css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abi-shai/AbishaiYapele_3_20052021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abi-shai/AbishaiYapele_3_20052021/issues"
+  },
+  "homepage": "https://github.com/Abi-shai/AbishaiYapele_3_20052021#readme",
+  "dependencies": {
+    "sass": "^1.34.1"
+  }
+}

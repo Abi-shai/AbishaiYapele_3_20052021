@@ -1,3 +1,5 @@
+@import "utiles/variables";
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +11,6 @@ a {
 }
 
 /*Quelques variables*/
-
-$clr-violetfonce: #9356DC;
-$clr-violetclaire: #FF79DA;
-$clr-vertclaire: #99E2D0;
 
 /*Animations utilisees*/
 
@@ -478,3 +476,4 @@ footer {
         }
     }
 }
+
