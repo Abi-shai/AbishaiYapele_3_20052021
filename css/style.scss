@@ -104,11 +104,13 @@ body {
 /*Le css de la page d'acceuil commence ici*/
 
 header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: .8em 0em;
     background-color: rgb(248, 248, 248);
-    padding: 5% 0% 1% 29%;
 
     img {
-        width: 60%;
         object-fit: cover;
     }
 }
@@ -118,7 +120,7 @@ header {
     background-color: rgb(235, 235, 235);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
-    font-size: clamp(1.15em, 2vw, 15em);
+    font-size: 1em;
     padding-top: .8em;
     padding-bottom: .8em;
     display: flex;
@@ -133,7 +135,7 @@ header {
 
     h1 {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: clamp(1.5em, 5vw, 3.5em);
+        font-size: clamp(1.5em, 2vw, 1.7em);
         max-width: 100%;
         width: calc(100% - 4em);
         margin: 0 auto;
@@ -145,7 +147,7 @@ header {
         padding-top: .5em;
         width: calc(100% - 4em);
         margin: 0 auto;
-        font-size: clamp(1.1em, 2vw, 5em);
+        font-size: clamp(1.2em, 1vw, 1.5em);
     }
 
     .exploresto {
@@ -247,76 +249,84 @@ header {
     padding-top: 2.5em;
     padding-bottom: 4em;
     margin: 0 auto;
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    row-gap: 1.5em;
 
     h3 {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         width: calc(100% - 2.5em);
         margin: 0 auto;
         font-size: 1.5em;
-    }
-
-    a {
-        color: black;
-    }
-
-    .restaurants {
-        width: calc(100% - 4em);
-        box-shadow: 2px 4px 10px rgb(179, 179, 179);
-        margin: 0 auto;
-        position: relative;
-        border-radius: 20px;
         padding-bottom: 1em;
-        cursor: pointer;
+    }
 
-        img {
-            width: 100%;
-            border-radius: 15px 15px 0px 0px;
-            height: 200px;
-            object-fit: cover;
-            float: top;
+    &_menus {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        row-gap: 1.5em;
+
+        a {
+            color: black;
         }
 
-        .nomrecette {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 1.1em;
-            font-weight: 700;
-            width: calc(100% - 1.7em);
+        .restaurants {
+            width: calc(100% - 4em);
+            box-shadow: 2px 4px 10px rgb(179, 179, 179);
             margin: 0 auto;
-            padding-top: .2em;
-        }
+            position: relative;
+            border-radius: 20px;
+            padding-bottom: 1em;
+            cursor: pointer;
 
-        p {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            width: calc(100% - 1.7em);
-            margin: 0 auto;
-        }
-
-        .heart {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-
-            &:hover {
-                .fas {
-                    visibility: visible;
-                    mix-blend-mode: darken;
-                    animation: heartanim 350ms ease-in both;
-                }
+            img {
+                width: 100%;
+                border-radius: 15px 15px 0px 0px;
+                height: 200px;
+                object-fit: cover;
+                float: top;
             }
 
-            i {
+            .nomrecette {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 1.1em;
+                font-weight: 700;
+                width: calc(100% - 1.7em);
+                margin: 0 auto;
+                padding-top: .2em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            p {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                width: calc(100% - 1.7em);
+                margin: 0 auto;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .heart {
                 position: absolute;
-                right: .2em;
-                bottom: 0;
-            }
+                right: 1em;
+                bottom: 1em;
 
-            .fas {
-                visibility: hidden;
-                mix-blend-mode: darken;
-                color: $clr-violetfonce;
+                &:hover {
+                    .fas {
+                        visibility: visible;
+                        mix-blend-mode: darken;
+                        animation: heartanim 350ms ease-in both;
+                    }
+                }
+
+                i {
+                    position: absolute;
+                    right: .2em;
+                    bottom: 0;
+                }
+
+                .fas {
+                    visibility: hidden;
+                    mix-blend-mode: darken;
+                    color: $clr-violetfonce;
+                }
             }
         }
     }
@@ -403,5 +413,53 @@ footer {
 
     to {
         transform: scale(1);
+    }
+}
+
+//Version Tablette
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .menu {
+        &_options {
+            flex-direction: row;
+            gap: 1em
+        }
+    }
+}
+
+//Version Laptop et Desktop
+@media screen and (min-width: 1024px) {
+    .acceuilmsg {
+        h1 {
+            margin: 0 auto;
+        }
+
+        .h1after {
+            margin: 0 auto;
+        }
+
+        .exploresto {
+            padding-bottom: 0;
+
+            button {
+                width: 25em;
+            }
+        }
+    }
+
+    .menu {
+        width: calc(100% - 10em);
+
+        &_options {
+            flex-direction: row;
+            gap: 2em;
+        }
+    }
+
+    .main {
+        &_menus {
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            row-gap: 4em;
+        }
     }
 }
