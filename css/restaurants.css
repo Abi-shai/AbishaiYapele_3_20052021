@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box; }
 
-/*Quelques variables*/
+a {
+  text-decoration-line: none; }
+
 /*Animations*/
 @keyframes heartanim {
   0%,
