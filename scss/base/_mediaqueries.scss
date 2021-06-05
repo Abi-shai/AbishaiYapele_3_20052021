@@ -1,23 +1,7 @@
-//Version Tablette
-@media screen and (min-width: 600px) and (max-width: 1023px) {
-    .menu {
-        &_options {
-            flex-direction: row;
-            gap: 1em
-        }
-    }
-}
-
 //Version Laptop et Desktop
-@media screen and (min-width: 1024px) {
-    .acceuilmsg {
-        h1 {
-            margin: 0 auto;
-        }
 
-        .h1after {
-            margin: 0 auto;
-        }
+@media screen and (min-width: 600px) {
+    .acceuilmsg {
 
         .exploresto {
             padding-bottom: 0;
@@ -28,20 +12,4 @@
         }
     }
 
-    .menu {
-        width: calc(100% - 10em);
-
-        &_options {
-            flex-direction: row;
-            gap: 2em;
-        }
-    }
-
-    .main {
-        &_menus {
-            grid-template-columns: auto auto;
-            grid-template-rows: auto auto;
-            row-gap: 4em;
-        }
-    }
 }

@@ -1,10 +1,10 @@
-@import "utiles/variables";
-@import "layouts/header";
-@import "layouts/footer";
-@import "base/resetstylesheet";
-@import "base/keyframes";
-@import "base/mediaqueries";
-@import "components/buttons";
+@use "./base/resetstylesheet"as *;
+@use "./utiles/variables"as *;
+@use "./layouts/header&footer"as *;
+@use "./base/keyframes"as *;
+@use "./components/buttons"as *;
+@import "./base/mediaqueries";
+
 
 header,
 main,
@@ -78,6 +78,12 @@ footer,
 .acceuilmsg {
     background-color: rgb(248, 248, 248);
     padding-bottom: 3em;
+    margin: 0 auto;
+    @media  screen and (min-width: 600px) {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+    }
 
     h1 {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -104,6 +110,10 @@ footer,
     padding-top: 2.5em;
     width: calc(100% - 4em);
     margin: 0 auto;
+    @media screen and (min-width: 1024px) {
+        width: calc(100% - 10em);
+        margin: 0 auto;
+    }
 
     h3 {
         width: 100%;
@@ -114,54 +124,67 @@ footer,
     &_options {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         gap: 1em;
 
-        .optionmenu {
-            position: relative;
-            font-size: 1.1rem;
-            font-weight: 600;
-            background-color: rgb(248, 248, 248);
-            box-shadow: 2px 4px 10px rgb(179, 179, 179);
-            border-radius: 30px;
-            padding-top: 1.3em;
-            padding-bottom: 1.3em;
-            padding-left: 1.5em;
-            width: 100%;
-            margin-bottom: .5em;
-            transition: transform 150ms ease-in;
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+            gap: 1em;
+        }
 
-            &:hover {
-                cursor: pointer;
-                box-shadow: 2px 7px 10px rgb(179, 179, 179);
-                background-color: lighten($clr-violetfonce, $amount: 25);
-                transform: scale(1.01);
+        @media screen and (min-width: 600px) and (max-width: 1023px) {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
 
-                i {
-                    color: $clr-violetfonce;
-                }
+    }
 
-            }
 
-            .menu_numerotations {
-                position: absolute;
-                top: 23px;
-                left: -6px;
-                padding: .4em .68em;
-                border-radius: 50%;
-                color: white;
-                font-weight: lighter;
-                font-size: .79em;
-                background-color: $clr-violetfonce;
-            }
+    .optionmenu {
+        position: relative;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background-color: rgb(248, 248, 248);
+        box-shadow: 2px 4px 10px rgb(179, 179, 179);
+        border-radius: 30px;
+        padding-top: 1.3em;
+        padding-bottom: 1.3em;
+        padding-left: 1.5em;
+        width: 100%;
+        margin-bottom: .5em;
+        transition: transform 150ms ease-in;
+
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 2px 7px 10px rgb(179, 179, 179);
+            background-color: lighten($clr-violetfonce, $amount: 25);
+            transform: scale(1.01);
 
             i {
-                color: grey;
-                padding-right: 1.5em;
-                padding-left: 1em;
+                color: $clr-violetfonce;
             }
+
+        }
+
+        .menu_numerotations {
+            position: absolute;
+            top: 23px;
+            left: -6px;
+            padding: .4em .68em;
+            border-radius: 50%;
+            color: white;
+            font-weight: lighter;
+            font-size: .79em;
+            background-color: $clr-violetfonce;
+        }
+
+        i {
+            color: grey;
+            padding-right: 1.5em;
+            padding-left: 1em;
         }
     }
+
 }
 
 .main {
@@ -182,6 +205,14 @@ footer,
         display: grid;
         grid-template-rows: auto auto auto auto;
         row-gap: 1.5em;
+
+        @media screen and (min-width: 600px) {
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            row-gap: 4em;
+        }
+
+
 
         a {
             color: black;

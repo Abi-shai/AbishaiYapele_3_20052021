@@ -1,4 +1,4 @@
-
+@use "../utiles/variables" as *;
 footer {
     background-color: rgb(48, 48, 48);
     padding-top: 1.5em;
@@ -21,6 +21,10 @@ footer {
         display: flex;
         flex-direction: column;
         gap: .5em;
+        @media  screen and (min-width: 800px) {
+            display: grid;
+            grid-auto-flow: column;
+        }
 
         p {
             cursor: pointer;
