@@ -3,7 +3,7 @@
 @use "./layouts/header&footer"as *;
 @use "./base/keyframes"as *;
 @use "./components/buttons"as *;
-@import "./base/mediaqueries";
+@use "./base/mediaqueries" as *;
 
 
 header,
@@ -15,6 +15,10 @@ footer,
     animation: imageblur 3s ease-in-out;
 }
 
+body{
+    position: relative;
+}
+
 
 
 
@@ -23,18 +27,20 @@ footer,
 .loading {
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    bottom: 0;
     z-index: -1;
     background-color: rgba(82, 82, 82, 0.5);
     opacity: 0;
     animation: loadingpage 3s ease-in-out;
 
     &_buttons {
-        position: relative;
-        top: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -51,7 +57,6 @@ footer,
             border-width: 3em;
             border-right-color: $clr-violetfonce;
             border-left-color: $clr-violetfonce;
-            opacity: 1;
             animation: spin-left 1.1s linear infinite alternate-reverse;
         }
 
@@ -59,7 +64,6 @@ footer,
             border-width: 2em;
             border-right-color: $clr-violetclaire;
             border-left-color: $clr-violetclaire;
-            opacity: 1;
             animation: spin-right 1.1s linear infinite alternate-reverse;
         }
 
@@ -67,7 +71,6 @@ footer,
             border-width: 1em;
             border-right-color: rgb(153, 226, 208);
             border-left-color: rgb(153, 226, 208);
-            opacity: 1;
             animation: spin-left 1s linear infinite alternate-reverse;
         }
     }
@@ -263,7 +266,7 @@ footer,
                     .fas {
                         visibility: visible;
                         mix-blend-mode: darken;
-                        animation: heartanim 350ms ease-in both;
+                        animation: heartanim 500ms ease-in-out forwards;
                     }
                 }
 
