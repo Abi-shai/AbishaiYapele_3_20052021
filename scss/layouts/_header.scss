@@ -22,7 +22,10 @@ header {
     gap: 1em;
     align-items: center;
     justify-content: center;
-    input{
+    justify-self: center;
+
+    input {
+        font-size: .85em;
         font-weight: 600;
         border: none;
         background-color: rgb(235, 235, 235);
