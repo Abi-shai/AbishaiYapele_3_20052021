@@ -3,7 +3,7 @@
 @use "./layouts/header&footer"as *;
 @use "./base/keyframes"as *;
 @use "./components/buttons"as *;
-@use "./base/mediaqueries" as *;
+@use "./base/mediaqueries"as *;
 
 
 header,
@@ -15,7 +15,7 @@ footer,
     animation: imageblur 3s ease-in-out;
 }
 
-body{
+body {
     position: relative;
 }
 
@@ -79,13 +79,17 @@ body{
 /*Le css de la page d'acceuil commence ici*/
 
 .acceuilmsg {
-    background-color: rgb(248, 248, 248);
     padding-bottom: 3em;
     margin: 0 auto;
-    @media  screen and (min-width: 600px) {
+    position: relative;
+
+    @media screen and (min-width: 800px) {
         display: grid;
         grid-template-rows: auto auto auto;
         grid-template-columns: auto;
+        align-self: center;
+        justify-self: center;
+        width: calc(100% - 50%);
     }
 
     h1 {
@@ -105,6 +109,12 @@ body{
         font-size: clamp(1.2em, 1vw, 1.5em);
     }
 
+    .exploresto {
+        button {
+            width: 100%;
+        }
+    }
+
 }
 
 .menu {
@@ -113,6 +123,7 @@ body{
     padding-top: 2.5em;
     width: calc(100% - 4em);
     margin: 0 auto;
+
     @media screen and (min-width: 1024px) {
         width: calc(100% - 10em);
         margin: 0 auto;
@@ -134,7 +145,7 @@ body{
             gap: 1em;
         }
 
-        @media screen and (min-width: 600px) and (max-width: 1023px) {
+        @media screen and (min-width: 650px) and (max-width: 1050px) {
             display: grid;
             grid-template-columns: auto auto;
         }

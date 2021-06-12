@@ -1,6 +1,6 @@
-@use "../utiles/variables" as *;
-@use "../base/resetstylesheet" as *;
-@use "../layouts/footer" as *;
+@use "../utiles/variables"as *;
+@use "../base/resetstylesheet"as *;
+@use "../layouts/footer"as *;
 
 /*Animations*/
 @keyframes heartanim {
@@ -11,7 +11,7 @@
     }
 
     20%,
-    40%{
+    40% {
         opacity: 0.3;
     }
 
